@@ -36,7 +36,7 @@ const ToDo = () => {
 						<input onChange={inputHandler} value={inputText} type='text' id='create' />
 					</div>
 
-					<button onClick={() => addTask()}><img src='./assets/img/create.png' alt='' /></button>
+					<button onClick={() => addTask()}><img src='https://im0-tub-ru.yandex.net/i?id=b9ff3071f397f6cd6055801a27c32855&n=13' alt='' /></button>
 				</div>
 				<div className={s.tasks}>
 					{
@@ -55,7 +55,7 @@ const ToDo = () => {
 									<label htmlFor={`check${el.id}`} className={s.task__text}>
 										{el.text}
 									</label>
-									<button onClick={() => { buttonHandler(el.id) }}><img src='./assets/img/delete.png' alt='' /></button>
+									<button onClick={() => { buttonHandler(el.id) }}><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Simple_Prohibited.svg/1200px-Simple_Prohibited.svg.png' alt='' /></button>
 								</div>
 							);
 						})

@@ -14,7 +14,7 @@ function Header() {
 			<div className={s.wrapper} >
 				<div className={s.header__logo} >
 					<NavLink className={s.link} to='/' >
-						<img src='./assets/img/logo.png' alt='' />
+						<img src='https://uploads-ssl.webflow.com/5aaf70f0e8d43c7a71300daa/5aaf70f0e8d43c4f8a300ef2_autodesk-p-800.png' alt='' />
 						<div>
 							Logo
 						</div>
