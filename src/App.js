@@ -11,10 +11,10 @@ function App() {
 			<Header />
 			<div className='wrapper'>
 				<Switch>
-					<Route path='/' exact render={() => <Home />} />
-					<Route path='/ToDo' render={() => <ToDo />} />
-					<Route path='/getUsers' render={() => <GetUsers />} />
-					<Redirect to='/' />
+					<Route path='/react' exact render={() => <Home />} />
+					<Route path='/react/ToDo' render={() => <ToDo />} />
+					<Route path='/react/getUsers' render={() => <GetUsers />} />
+					<Redirect to='/react' />
 				</Switch>
 			</div>
 		</>
