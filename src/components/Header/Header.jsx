@@ -5,8 +5,8 @@ import Link from './Link/Link';
 
 function Header() {
 	const links = [
-		{ text: 'ToDo', path: '/toDo' },
-		{ text: 'GetUsers', path: '/getUsers' }
+		{ text: 'ToDo', path: '/react/toDo' },
+		{ text: 'GetUsers', path: '/react/getUsers' }
 	];
 
 	return (
