@@ -1,0 +1,147 @@
+.todo-block {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		color: red;
+		margin: 10px 0 30px 0;
+	}
+}
+
+.create-task {
+	margin: 0 0 30px 0;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+
+	.input {
+		margin: 0 10px;
+		width: 300px;
+		border-bottom: 1px solid black;
+
+		input {
+			padding: 0 5px;
+			width: 300px;
+
+			&:focus {
+				box-shadow: 0px 1px 0px 0px rgba(255, 0, 0, 1);
+			}
+		}
+	}
+
+	button {
+		position: relative;
+		bottom: 1px;
+		padding: 2px;
+		border: 2px solid transparent;
+
+		&:focus {
+			border: 2px solid red;
+			border-radius: 50%;
+		}
+
+		img {
+			height: 20px;
+		}
+	}
+}
+
+.task {
+	width: 400px;
+	display: flex;
+	align-items: center;
+	margin: 10px 10px;
+	justify-content: space-between;
+
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	label::before {
+		content: "";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: red;
+		margin: 3px 5px 2px -7px;
+		padding: 5px;
+		border-radius: 50%;
+	}
+
+	input[type="checkbox"]:checked + label::before {
+		background-color: rgba(0, 255, 0, 0.5);
+	}
+
+	input[type="checkbox"]:checked + &__text {
+		text-decoration: line-through;
+		text-decoration-color: rgba(0, 255, 0, 0.5);
+	}
+
+	&__text {
+		margin: 0 10px;
+		cursor: pointer;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+	}
+
+	button {
+		height: 20px;
+
+		&:focus {
+			border: 2px solid red;
+			box-shadow: 2px s;
+			border-radius: 50%;
+			padding: 2px;
+		}
+
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.tasks {
+	max-width: 450px;
+}
+
+.nothing {
+	font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+	.todo-block {
+		&__title {
+			font-size: 40px;
+		}
+	}
+
+	.create-task {
+		font-size: 18px;
+		.input {
+			width: 200px;
+			input {
+				width: 200px;
+			}
+		}
+	}
+
+	.task {
+		width: 200px;
+
+		&__text {
+			font-size: 16px;
+		}
+	}
+
+	.tasks {
+		max-width: 250px;
+	}
+
+	.nothing {
+		font-size: 30px;
+	}
+}
