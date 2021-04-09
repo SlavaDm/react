@@ -7,13 +7,13 @@ const defaultState = {
 export default function ToDo(state = defaultState, action) {
 	switch (action.type) {
 		case ADD_TASK:
-			const addedPeopleInArray = [...state.tasks, action.payload];
+			const addedTasks = [...state.tasks, action.payload];
 
-			localStorage.setItem('tasks', JSON.stringify(addedPeopleInArray));
+			localStorage.setItem('tasks', JSON.stringify(addedTasks));
 
 			return {
 				...state,
-				tasks: addedPeopleInArray
+				tasks: addedTasks
 			}
 
 		case CHANGE_TASK:
@@ -33,13 +33,13 @@ export default function ToDo(state = defaultState, action) {
 			}
 
 		case DELETE_TASK:
-			const arrayWithoutDeletedPeople = state.tasks.filter(el => el.id !== action.payload);
+			const arrayWithoutDeletedTasks = state.tasks.filter(el => el.id !== action.payload);
 
-			localStorage.setItem('tasks', JSON.stringify(arrayWithoutDeletedPeople));
+			localStorage.setItem('tasks', JSON.stringify(arrayWithoutDeletedTasks));
 
 			return {
 				...state,
-				tasks: arrayWithoutDeletedPeople
+				tasks: arrayWithoutDeletedTasks
 			}
 
 		default:
